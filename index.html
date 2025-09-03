@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Changelog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(120deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .changelog-container {
+            padding: 2rem;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        
+        /* Vertical line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4b6cb7, #182848);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-date {
+            flex: 1;
+            text-align: right;
+            padding-right: 2.5rem;
+            font-weight: 600;
+            color: #4b6cb7;
+            font-size: 1.1rem;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding-left: 2.5rem;
+            border-left: none;
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #182848;
+            font-weight: 600;
+        }
+        
+        .timeline-content p {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        /* Circle marker */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: #4b6cb7;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #4b6cb7;
+        }
+        
+        .view-complete {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .view-complete a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(120deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(75, 108, 183, 0.3);
+        }
+        
+        .view-complete a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(75, 108, 183, 0.4);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-date {
+                text-align: left;
+                padding-right: 0;
+                padding-left: 60px;
+                margin-bottom: 0.5rem;
+            }
+            
+            .timeline-content {
+                padding-left: 60px;
+            }
+            
+            .timeline-item::after {
+                left: 30px;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Changelog</h1>
+            <p class="subtitle">Here's everything we have shipped in the past few days</p>
+        </header>
+        
+        <div class="changelog-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">September 3, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Announcing Projects on Frontend Roadmap</h3>
+                        <p>New project-based learning paths to help you build practical frontend development skills.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 28, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Build your learning habits with learning streaks</h3>
+                        <p>Track your consistency and build strong learning habits with our new streak system.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 25, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Git and GitHub Roadmap</h3>
+                        <p>Master version control with our comprehensive Git and GitHub learning roadmap.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 22, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Submit your project solution and get feedback</h3>
+                        <p>Share your project solutions and receive personalized feedback from our community.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 15, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Backend Project Ideas</h3>
+                        <p>Explore a collection of backend project ideas to enhance your server-side development skills.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 10, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Redis roadmap</h3>
+                        <p>Learn in-memory data structure store with our new Redis learning path.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">August 1, 2024</div>
+                    <div class="timeline-content">
+                        <h3>Changelog page to help you stay in the loop</h3>
+                        <p>We've created this changelog to keep you updated on all our latest features and improvements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-complete">
+                <a href="#"><i class="fas fa-list-alt"></i> Visit Complete Changelog</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2024 Product Changelog • Keep updated with our latest features</p>
+        </footer>
+    </div>
+</body>
+</html>
